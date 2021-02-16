@@ -1,0 +1,11 @@
+version: "3"
+services:
+  php8:
+    build:
+      context: .
+      dockerfile: Php8.Dockerfile
+    container_name: php8_tests
+    ports: 
+      - "8000:8080"
+    volumes: 
+      - ".:/var/www"
